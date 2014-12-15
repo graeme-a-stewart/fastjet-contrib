@@ -220,7 +220,7 @@ namespace contrib{
   //  allow some leeway for detector effects
   void JetCleanser::_CheckRescalingValues(double & pt_all, const double & ptc_lv, const double & ptc_pu) const {
     double ratio = (ptc_lv + ptc_pu)/pt_all;
-    if ( ratio > 1.05 ) throw Error("_CheckRescalingValues: ptc_lv + ptc_pu is more than 5\% larger than pt_all");
+    if ( ratio > 1.05 ) throw Error("_CheckRescalingValues: ptc_lv + ptc_pu is more than 5% larger than pt_all");
     else if ( ratio > 1.0 ){ pt_all = pt_all * ratio; }
   }
 
